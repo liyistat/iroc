@@ -8,8 +8,6 @@ Description: Calculate the accuracy,sensitivity,specificity (set the threshold
     to the top left corner of the graph) of the Receiver operating characteristic
     (ROC) curve. Plot the ROC curve and calculate the area under the curve (AUC). I
     also provide the Confidence intervals (CI) for AUC using DeLong's Method.
-Depends:
-    R(>= 3.0.0)
 Imports:
     ROCR,
     pROC
