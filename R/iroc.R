@@ -2,10 +2,18 @@
 #'
 #' Calculate sensitivity, specitifity, accuracy and AUC of the ROC.
 #' And the 0.95 CI of AUC were calculated by DeLong's method.
-#' @param testy A numeric vector containing  prediction probabilities.
-#' @param yhat A vector containing the true class labels.
-#' @return result A list of sensitivity, specifity, accuracy, AUC and 0.95 CI of AUC.
+#' @param testy  A numeric vector containing  prediction probabilities.
+#' @param yhat  A vector containing the true class labels.
+#' @return result  A list of sensitivity, specifity, accuracy, AUC and 0.95 CI of AUC.
 #' @export
+#' @examples
+#' #Simulate true prediction labels
+#' testy<-rep(c(0,1),500)
+#' #Simulate prediction probabilities
+#' yhat<-runif(1000, min = 0, max = 1)
+#' #Calculate the sensitivity, specifity, accuracy in topleft of the ROC curve
+#' #Calculate AUC and 0.95 CI of AUC.
+#' pred.result(testy,yhat)
 pred.result<-function(testy,yhat){
   #optimal threshold
   result.roc<- pROC::roc(testy,yhat)
@@ -22,6 +30,7 @@ pred.result<-function(testy,yhat){
   result<-list(result1,ci)
   return(result)
 }
+
 
 #'Calculate the performance for the ROC curve
 #' @param testy A numeric vector containing  prediction probabilities.
@@ -42,6 +51,15 @@ perf<-function(testy,yhat){
 #' @param yhat A vector containing the true class labels.
 #' @return The figure of the ROC curve.
 #' @export
+#' @examples
+#' #Simulate true prediction labels
+#' testy<-rep(c(0,1),500)
+#' #Simulate prediction probabilities
+#' yhat<-runif(1000, min = 0, max = 1)
+#' #Plot the ROC curve and show the AUC and its CI
+#' iroc(testy, yhat)
+
+
 iroc<-function(testy,yhat){
   title<-paste("Plot ROC curve")
   ROCR::plot(perf(testy,yhat),colorize = T, lwd = 2, main = title)
@@ -53,6 +71,3 @@ iroc<-function(testy,yhat){
   nameci<-paste("95% CI:", ci)
   legend("topleft",c(nameauc, nameci), cex=1)
 }
-
-
-
