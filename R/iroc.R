@@ -2,6 +2,7 @@
 #'
 #' Calculate sensitivity, specitifity, accuracy and AUC of the ROC.
 #' And the 0.95 CI of AUC were calculated by DeLong's method.
+#' @author Yi Li, \email{liyistat@@gmail.com}
 #' @param testy  A numeric vector containing  prediction probabilities.
 #' @param yhat  A vector containing the true class labels.
 #' @return result  A list of sensitivity, specifity, accuracy, AUC and 0.95 CI of AUC.
@@ -14,6 +15,7 @@
 #' #Calculate the sensitivity, specifity, accuracy in topleft of the ROC curve
 #' #Calculate AUC and 0.95 CI of AUC.
 #' pred.result(testy,yhat)
+
 pred.result<-function(testy,yhat){
   #optimal threshold
   result.roc<- pROC::roc(testy,yhat)
@@ -47,6 +49,7 @@ perf<-function(testy,yhat){
 #'
 #' Plot the ROC curve and show the AUC of ROC.
 #' The 0.95 CI of AUC were calculated by DeLong's method.
+#' @author Yi Li, \email{liyistat@@gmail.com}
 #' @param testy A numeric vector containing  prediction probabilities.
 #' @param yhat A vector containing the true class labels.
 #' @return The figure of the ROC curve.
