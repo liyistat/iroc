@@ -27,4 +27,7 @@ yhat<-runif(1000, min = 0, max = 1)
 #Calculate AUC and 0.95 CI of AUC.
 pred.result(testy,yhat)
 }
+\author{
+Yi Li, \email{liyistat@gmail.com}
+}
 

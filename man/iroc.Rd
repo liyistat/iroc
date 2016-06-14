@@ -26,4 +26,7 @@ yhat<-runif(1000, min = 0, max = 1)
 #Plot the ROC curve and show the AUC and its CI
 iroc(testy, yhat)
 }
+\author{
+Yi Li, \email{liyistat@gmail.com}
+}
 
