@@ -18,4 +18,12 @@ The figure of the ROC curve.
 Plot the ROC curve and show the AUC of ROC.
 The 0.95 CI of AUC were calculated by DeLong's method.
 }
+\examples{
+#Simulate true prediction labels
+testy<-rep(c(0,1),500)
+#Simulate prediction probabilities
+yhat<-runif(1000, min = 0, max = 1)
+#Plot the ROC curve and show the AUC and its CI
+iroc(testy, yhat)
+}
 

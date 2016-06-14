@@ -12,10 +12,19 @@ pred.result(testy, yhat)
 \item{yhat}{A vector containing the true class labels.}
 }
 \value{
-result A list of sensitivity, specifity, accuracy, AUC and 0.95 CI of AUC.
+result  A list of sensitivity, specifity, accuracy, AUC and 0.95 CI of AUC.
 }
 \description{
 Calculate sensitivity, specitifity, accuracy and AUC of the ROC.
 And the 0.95 CI of AUC were calculated by DeLong's method.
+}
+\examples{
+#Simulate true prediction labels
+testy<-rep(c(0,1),500)
+#Simulate prediction probabilities
+yhat<-runif(1000, min = 0, max = 1)
+#Calculate the sensitivity, specifity, accuracy in topleft of the ROC curve
+#Calculate AUC and 0.95 CI of AUC.
+pred.result(testy,yhat)
 }
 
