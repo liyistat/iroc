@@ -22,4 +22,5 @@ library(iroc);
 # Reference: 
 https://github.com/liyistat/iroc
 
-# Contact me: liyistat@gmail.com
+# Contact me: 
+liyistat@gmail.com
