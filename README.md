@@ -18,5 +18,5 @@ https://github.com/liyistat/iroc
 # Contact me: 
 liyistat@gmail.com
 
-# Comments or Suggestions:
+# Suggestions:
 https://github.com/liyistat/iroc/issues
