@@ -71,5 +71,5 @@ iroc<-function(testy,yhat){
   nameauc<-paste("AUC",round(auc,4),sep=" = ")
   ci<-paste(round(auc_ci[1],4),round(auc_ci[3],4),sep=" - ")
   nameci<-paste("95% CI:", ci)
-  legend("bottom",c(nameauc, nameci), cex=1, box.lty = 2)
+  legend(0.5,0.2,c(nameauc, nameci), cex=1.1, box.lty = 2,box.col = "white")
 }
