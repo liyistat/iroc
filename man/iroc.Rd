@@ -24,6 +24,7 @@ testy<-rep(c(0,1),500)
 #Simulate prediction probabilities
 yhat<-runif(1000, min = 0, max = 1)
 #Plot the ROC curve and show the AUC and its CI
+#Print the prediction performance of the topleft point
 iroc(testy, yhat)
 }
 \author{
