@@ -62,15 +62,14 @@ perf<-function(testy,yhat){
 #' #Plot the ROC curve and show the AUC and its CI
 #' iroc(testy, yhat)
 
-
 iroc<-function(testy,yhat){
-  title<-paste("Plot ROC curve")
-  ROCR::plot(perf(testy,yhat),colorize = T, lwd = 2, main = title)
+  title<-paste("Plot the ROC curve")
+  ROCR::plot(perf(testy,yhat),colorize = T, lwd = 2, main=title)
   abline(0, 1, lty = 8, col = "light blue")
   auc<-pred.result(testy,yhat)[[1]][4]
   auc_ci<-pred.result(testy,yhat)[[2]]
   nameauc<-paste("AUC",round(auc,4),sep=" = ")
   ci<-paste(round(auc_ci[1],4),round(auc_ci[3],4),sep=" - ")
   nameci<-paste("95% CI:", ci)
-  legend("topleft",c(nameauc, nameci), cex=1)
+  legend("bottom",c(nameauc, nameci), cex=1, box.lty = 2)
 }
