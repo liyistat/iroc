@@ -12,11 +12,10 @@ devtools::install_github("liyistat/iroc");
 library(iroc);
 ```
 
-# Reference: 
-https://github.com/liyistat/iroc
-
-# Contact me: 
-liyistat@gmail.com
-
-# Suggestions:
-https://github.com/liyistat/iroc/issues
+# You can also install package dependencies by install_github
+```{r}
+devtools::install_github("cran/ROCR");
+devtools::install_github("cran/pROC");
+devtools::install_github("liyistat/iroc");
+library(iroc);
+```
