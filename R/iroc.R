@@ -3,8 +3,8 @@
 #' Calculate sensitivity, specitifity, accuracy and AUC of the ROC.
 #' And the 0.95 CI of AUC were calculated by DeLong's method.
 #' @author Yi Li, \email{liyistat@@gmail.com}
-#' @param testy  A numeric vector containing  prediction probabilities.
-#' @param yhat  A vector containing the true class labels.
+#' @param testy A vector containing the true class labels.
+#' @param yhat A numeric vector containing  prediction probabilities.
 #' @return result  A list of sensitivity, specifity, accuracy, AUC and 0.95 CI of AUC.
 #' @export
 #' @examples
@@ -36,8 +36,8 @@ pred.result<-function(testy,yhat){
 }
 
 #'Calculate the performance for the ROC curve
-#' @param testy A numeric vector containing  prediction probabilities.
-#' @param yhat A vector containing the true class labels.
+#' @param testy A vector containing the true class labels.
+#' @param yhat A numeric vector containing  prediction probabilities.
 #' @return Performance for the ROC curve
 #' @export
 perf<-function(testy,yhat){
@@ -51,9 +51,9 @@ perf<-function(testy,yhat){
 #' Plot the ROC curve and show the AUC of ROC.
 #' The 0.95 CI of AUC were calculated by DeLong's method.
 #' @author Yi Li, \email{liyistat@@gmail.com}
-#' @param testy A numeric vector containing  prediction probabilities.
-#' @param yhat A vector containing the true class labels.
-#' @return The figure of the ROC curve.
+#' @param testy A vector containing the true class labels.
+#' @param yhat A numeric vector containing  prediction probabilities.
+#' @return Figure of the ROC curve.
 #' @export
 #' @examples
 #' #Simulate true prediction labels
