@@ -7,9 +7,9 @@
 pred.result(testy, yhat)
 }
 \arguments{
-\item{testy}{A numeric vector containing  prediction probabilities.}
+\item{testy}{A vector containing the true class labels.}
 
-\item{yhat}{A vector containing the true class labels.}
+\item{yhat}{A numeric vector containing  prediction probabilities.}
 }
 \value{
 result  A list of sensitivity, specifity, accuracy, AUC and 0.95 CI of AUC.

@@ -7,9 +7,9 @@
 perf(testy, yhat)
 }
 \arguments{
-\item{testy}{A numeric vector containing  prediction probabilities.}
+\item{testy}{A vector containing the true class labels.}
 
-\item{yhat}{A vector containing the true class labels.}
+\item{yhat}{A numeric vector containing  prediction probabilities.}
 }
 \value{
 Performance for the ROC curve

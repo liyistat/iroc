@@ -7,12 +7,12 @@
 iroc(testy, yhat)
 }
 \arguments{
-\item{testy}{A numeric vector containing  prediction probabilities.}
+\item{testy}{A vector containing the true class labels.}
 
-\item{yhat}{A vector containing the true class labels.}
+\item{yhat}{A numeric vector containing  prediction probabilities.}
 }
 \value{
-The figure of the ROC curve.
+Figure of the ROC curve.
 }
 \description{
 Plot the ROC curve and show the AUC of ROC.
