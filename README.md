@@ -19,3 +19,5 @@ devtools::install_github("cran/pROC");
 devtools::install_github("liyistat/iroc");
 library(iroc);
 ```
+# Reference
+https://github.com/liyistat/iroc
